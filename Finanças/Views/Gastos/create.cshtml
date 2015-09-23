@@ -1,0 +1,45 @@
+﻿@model Finanças.Models.Gastos
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Novo gasto</h2>
+
+<div class="panel">
+
+    <form action="/Gastos/create" method="post">
+
+        <div class="form-group">
+            <label>Id</label>
+            <input class="form-control" type="text" id="id" name="id" value="" />
+        </div>
+
+        <div class="form-group">
+            <label>Local</label>
+            <input class="form-control" placeholder=""
+                   type="text" id="Name" name="onde" value="" />
+        </div>
+
+        <div class="form-group">
+            <label>Tipo da compra</label>
+            <input class="form-control" placeholder=""
+                   type="text" id="Name" name="tipo" value="" />
+        </div>
+
+        <div class="form-group">
+            <label>Valor</label>
+            <input class="form-control" placeholder=""
+                   type="text" id="Name" name="valor" value="" />
+        </div>
+
+        <div class="form-group">
+            <label>Data</label>
+            <input class="form-control" placeholder=""
+                   type="text" id="Name" name="data" value="" />
+        </div>
+
+
+        <button type="submit" class="btn btn-default">Salvar</button>
+
+    </form>
+</div>

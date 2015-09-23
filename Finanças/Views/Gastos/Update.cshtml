@@ -1,0 +1,47 @@
+﻿@model Finanças.Models.Gastos
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<h2>Editar aluno</h2>
+
+<div class="panel">
+
+    <form action="/Gastos/Update" method="post">
+
+        <div class="form-group">
+            <label>Id</label>
+            <input class="form-control" type="text" id="id" name="id" value=@Model.id />
+        </div>
+
+        <div class="form-group">
+            <label>Local</label>
+            <input class="form-control" placeholder=""
+                   type="text" id="Name" name="onde" value=@Model.onde />
+        </div>
+
+        <div class="form-group">
+            <label>Tipo da compra</label>
+            <input class="form-control" placeholder=""
+                   type="text" id="Name" name="tipo" value=@Model.tipo />
+        </div>
+
+        <div class="form-group">
+            <label>Valor</label>
+            <input class="form-control" placeholder=""
+                   type="text" id="Name" name="valor" value=@Model.valor />
+        </div>
+
+        <div class="form-group">
+            <label>Data</label>
+            <input class="form-control" placeholder=""
+                   type="text" id="Name" name="data" value=@Model.data />
+        </div>
+
+
+        <button type="submit" class="btn btn-default">Salvar</button>
+
+    </form>
+</div>

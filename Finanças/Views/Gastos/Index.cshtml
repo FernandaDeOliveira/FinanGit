@@ -1,0 +1,39 @@
+﻿
+@model IEnumerable<Finanças.Models.Gastos>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Gastos</h2>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Onde gastou</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.onde</td>
+                <td>@item.tipo</td>
+                <td>@item.valor</td>
+                <td>@item.data</td>
+                <td><a href="~/Index/Delete/@item.id">Delete</a></td>
+                <td><a href="~/Gastos/Update/@item.id">Editar</a></td>
+
+            </tr>
+        }
+        <a href="~/Gastos/create">Novo gasto</a></td>
+    
+    </table>
+    
+
