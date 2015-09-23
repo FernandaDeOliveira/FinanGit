@@ -42,5 +42,13 @@ namespace Finanças.Controllers
             repositorio.update(pGastos);
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(int id)
+        {
+            repositorio.delete(id);
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
