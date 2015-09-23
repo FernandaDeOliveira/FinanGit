@@ -49,6 +49,18 @@ namespace Finanças.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult pesquisar(int Id)
+        {
+            var pesq = repositorio.getOne(Id);
+            return View(pesq);
+        }
+
+        [HttpPost]
+        public ActionResult pesquisar(string pData)
+        {
+            repositorio.pesquisar(pData);
+            return RedirectToAction("pesquisar");
+        }
 
     }
 }

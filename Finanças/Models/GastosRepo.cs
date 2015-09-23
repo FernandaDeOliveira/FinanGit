@@ -50,5 +50,11 @@ namespace Finanças.Models
             string delete = "DELETE  FROM gastos WHERE id=" + pId;
             conn.executarComando(delete);
         }
+
+        public void pesquisar(string pData)
+        {
+            string pesquisa = "SELECT FROM gastos WHERE data=" + pData;
+            conn.executarComando(pesquisa);
+        }
     }
 }

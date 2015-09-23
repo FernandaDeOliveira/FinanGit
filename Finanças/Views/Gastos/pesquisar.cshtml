@@ -1,7 +1,7 @@
 ﻿
 @model IEnumerable<Finanças.Models.Gastos>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "pesquisar";
 }
 
 <h2>Gastos</h2>
@@ -27,16 +27,10 @@
                 <td>@item.tipo</td>
                 <td>@item.valor</td>
                 <td>@item.data</td>
-                <td><a href="~/Gastos/Delete/@item.id">Delete</a></td>
-                <td><a href="~/Gastos/Update/@item.id">Editar</a></td>
+                @{
+                    ViewBag.Title = "pesquisar";
+                }
 
-            </tr>
-        }
-        <a href="~/Gastos/create">Adiconar gasto</a></td>
-        
-    
-    </table>
-    <input class="form-control" type="text" id="pesquisa" name="data" value="Data" /> <a href="~/Gastos/pesquisar">Pesquisar</a></td>
-    </div>
-    
+                <h2>pesquisar</h2>
 
+</table>
